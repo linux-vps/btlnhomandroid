@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Nanuda</string>
+    <string name="title_activity_expense_main_display">expense_main_display</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_create_expense">create_expense</string>
+    <string name="create_expense_button_text">Create Expense</string>
+    <string name="save_changes_button_text">Save Changes</string>
+    <string name="delete_expense_button_text">Delete Expense</string>
+    <string name="back_button_desc">Back Button</string>
+    <string name="add_expense_button_desc">Add Expense Button</string>
+    <string name="sync_button_label">SYNC</string>
+    <string name="expenses_tab_text">Expenses</string>
+    <string name="balances_tab_text">Balances</string>
+    <string name="add_expense_label">Add Expense</string>
+    <string name="edit_expense_label">Edit Expense</string>
+    <string name="name_label">Name</string>
+    <string name="amount_label">Amount</string>
+    <string name="date_label">Date</string>
+    <string name="payer_label">Who Paid</string>
+    <string name="payee_label">Paid For</string>
+    <string name="expense_name_placeholder">Input expense name</string>
+    <string name="expense_amount_placeholder">Input amount</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="groups_label">Groups</string>
+    <string name="new_group_button_text">Make/Join New Group</string>
+    <string name="group_name_placeholder">Input group name</string>
+    <string name="group_name_label">Name</string>
+    <string name="group_description_label">Description</string>
+    <string name="group_description_placeholder">Input group description</string>
+    <string name="group_currency_label">Currency</string>
+    <string name="group_participants_label">Participants</string>
+    <string name="group_participants_placeholder">Input participant\'s name</string>
+    <string name="add_participant_button_text">+</string>
+    <string name="make_group_button_text">Make Group</string>
+    <string-array name="currency">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>KRW</item>
+    </string-array>
+
+    <string-array name="expense_name">
+        <item>Expense Name 1</item>
+        <item>Expense Name 2</item>
+        <item>Expense Name 3</item>
+    </string-array>
+
+    <string-array name="paid_by">
+        <item>Paid by NAME</item>
+        <item>Paid by NAME</item>
+        <item>Paid by NAME</item>
+    </string-array>
+
+    <string-array name="amount">
+        <item>Amount</item>
+        <item>Amount</item>
+        <item>Amount</item>
+    </string-array>
+
+    <string-array name="date_array">
+        <item>11/11/20</item>
+        <item>11/11/20</item>
+        <item>11/11/20</item>
+    </string-array>
+
+
+
+    <string name="title_activity_expense_main_display2">ExpenseMainDisplay2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settlement_label">Settlement</string>
+    <string name="owes_label">should pay</string>
+    <string name="current_balances_label">Current Balances</string>
+    <string name="add_group_button">+ Make / Join New Group</string>
+    <string name="groupIdLabel">Group ID</string>
+    <string name="copy_id_button">Copy ID</string>
+    <string name="save_changes_button">SAVE CHANGES</string>
+    <string name="delete_group_button">Delete Group</string>
+</resources>
