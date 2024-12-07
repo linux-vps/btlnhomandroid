@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="8dp"
-        android:text="What do you want to do?"
+        android:text="Bạn muốn làm gì?"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
-            android:text="Make Group"
+            android:text="Tạo nhóm"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:text="Join Group"
+            android:text="Tham gia nhóm"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold" />
