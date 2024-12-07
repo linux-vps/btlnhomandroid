@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif"
-                android:text="@string/owes_label"
+                android:text="Phải trả"
                 android:textColor="@color/light_grey"
                 android:textSize="14sp" />
 

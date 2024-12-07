@@ -37,7 +37,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="16dp"
                         android:paddingTop="10dp"
-                        android:text="Expense Name"
+                        android:text="Khoản chi"
                         android:textColor="@color/green"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -50,7 +50,7 @@
                         android:paddingLeft="16dp"
                         android:paddingTop="0dp"
                         android:paddingBottom="10dp"
-                        android:text="Paid by participants_name"
+                        android:text="Người chi"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -70,7 +70,7 @@
                         android:paddingLeft="16dp"
                         android:paddingTop="10dp"
                         android:paddingRight="16dp"
-                        android:text="Amount"
+                        android:text="Số tiền"
                         android:textAlignment="textEnd"
                         android:textColor="@color/green"
                         android:textSize="16sp"
@@ -86,7 +86,7 @@
                         android:paddingTop="0dp"
                         android:paddingRight="16dp"
                         android:paddingBottom="10dp"
-                        android:text="date"
+                        android:text="Ngày"
                         android:textAlignment="textEnd"
                         android:textSize="12sp" />
 

@@ -34,7 +34,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="16dp"
                     android:paddingEnd="0dp"
-                    android:text="@string/name_label"
+                    android:text="Tiêu đề"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -46,7 +46,7 @@
                     android:autofillHints="input expense name"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Lunch"
+                    android:text="Tên khoản chi"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -64,7 +64,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="16dp"
                     android:paddingEnd="0dp"
-                    android:text="@string/amount_label"
+                    android:text="Số tiền"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -103,7 +103,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="16dp"
                     android:paddingEnd="0dp"
-                    android:text="@string/date_label"
+                    android:text="Ngày"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -114,7 +114,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="date"
-                    android:text="08/10/20"
+                    android:text="08/10/24"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -132,7 +132,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="16dp"
                     android:paddingEnd="0dp"
-                    android:text="@string/payer_label"
+                    android:text="Người chi"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -161,7 +161,7 @@
                     android:paddingStart="16dp"
                     android:paddingTop="16dp"
                     android:paddingEnd="0dp"
-                    android:text="@string/payer_label"
+                    android:text="Chi cho"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -198,7 +198,7 @@
                 android:gravity="center"
                 android:onClick="updateExpense"
                 android:shadowColor="@color/green"
-                android:text="@string/save_changes_button_text"
+                android:text="Lưu"
                 android:textColor="@color/white" />
 
 
@@ -219,7 +219,7 @@
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:onClick="deleteExpense"
-                android:text="@string/delete_expense_button_text"
+                android:text="Xóa"
                 android:textColor="@color/white"
                 android:theme="@style/Style.Nanuda.DeleteButton" />
 

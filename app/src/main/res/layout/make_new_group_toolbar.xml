@@ -6,7 +6,7 @@
     android:background="@color/green"
     android:elevation="4dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    app:title="Make a new group"
+    app:title="Tạo nhóm mới"
     app:logo="@drawable/ic_baseline_arrow_back_ios_24">
 
 </androidx.appcompat.widget.Toolbar>

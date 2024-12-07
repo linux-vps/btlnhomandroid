@@ -25,6 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/groupsListRecyclerView"
         android:layout_centerHorizontal="true"
-        android:text="@string/add_group_button" />
+        android:text="+ Tạo nhóm" />
 
 </RelativeLayout>

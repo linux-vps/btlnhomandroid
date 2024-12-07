@@ -22,7 +22,7 @@ public class AddGroupDialog extends Dialog implements View.OnClickListener {
     private final Context context;
 
     public Button makeGroupButton;
-    public Button joinGroupButton;
+//    public Button joinGroupButton;
 
     public AddGroupDialog(@NonNull Context context) {
         super(context);
@@ -36,11 +36,11 @@ public class AddGroupDialog extends Dialog implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.add_group_dialog);
 
-        makeGroupButton = (Button) findViewById(R.id.makeGroupButton);
-        joinGroupButton = (Button) findViewById(R.id.joinGroupButton);
+        makeGroupButton = findViewById(R.id.makeGroupButton);
+        //joinGroupButton = (Button) findViewById(R.id.joinGroupButton);
 
         makeGroupButton.setOnClickListener(this);
-        joinGroupButton.setOnClickListener(this);
+//        joinGroupButton.setOnClickListener(this);
     }
 
 //    @Override
@@ -61,45 +61,49 @@ public class AddGroupDialog extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.makeGroupButton) {
-            Intent intent = new Intent(context, MakeGroupActivity.class);
-            ((GroupsListActivity) context).startActivityForResult(intent, GroupsListActivity.MAKE_GROUP_REQUEST_CODE);
-        } else if (v.getId() == R.id.joinGroupButton) {
-            showJoinGroupDialog();
-        } else {
-            // Đoạn này có thể để trống nếu không cần xử lý gì khác trong trường hợp mặc định.
-        }
-        dismiss();
-    }
-
-
-
-    public void showJoinGroupDialog() {
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-
-        final View joinGroupDialogView = getLayoutInflater().inflate(R.layout.join_group_dialog, null);
-        EditText link = (EditText) joinGroupDialogView.findViewById(R.id.groupIdEditText);
-        Button joinGroupDialogButton = (Button) joinGroupDialogView.findViewById(R.id.joinGroupDialogButton);
-
-        dialogBuilder.setView(joinGroupDialogView);
-        Dialog dialog = dialogBuilder.create();
-        dialog.show();
-
-        joinGroupDialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ParseQuery<Group> query = ParseQuery.getQuery("Group");
-                query.getInBackground(link.getText().toString(), new GetCallback<Group>() {
-                    public void done(Group object, ParseException e) {
-                        if (e == null) {
-                            ((GroupsListActivity) context).updateGroupsList(object);
-                        } else {
-                            // something went wrong
-                            e.printStackTrace();
-                        }
-                        dialog.dismiss();
-                    }
-                });
+            if (context instanceof GroupsListActivity) {
+                Intent intent = new Intent(context, MakeGroupActivity.class);
+                ((GroupsListActivity) context).startActivityForResult(intent, GroupsListActivity.MAKE_GROUP_REQUEST_CODE);
+            } else {
+                throw new IllegalStateException("Context must be an instance of GroupsListActivity");
             }
-        });
+            dismiss();
+        } else {
+            // Xử lý trường hợp mặc định (nếu cần).
+            dismiss();
+        }
     }
+
+
+
+
+//    public void showJoinGroupDialog() {
+//        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+//
+//        final View joinGroupDialogView = getLayoutInflater().inflate(R.layout.join_group_dialog, null);
+//        EditText link = (EditText) joinGroupDialogView.findViewById(R.id.groupIdEditText);
+//        Button joinGroupDialogButton = (Button) joinGroupDialogView.findViewById(R.id.joinGroupDialogButton);
+//
+//        dialogBuilder.setView(joinGroupDialogView);
+//        Dialog dialog = dialogBuilder.create();
+//        dialog.show();
+//
+//        joinGroupDialogButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ParseQuery<Group> query = ParseQuery.getQuery("Group");
+//                query.getInBackground(link.getText().toString(), new GetCallback<Group>() {
+//                    public void done(Group object, ParseException e) {
+//                        if (e == null) {
+//                            ((GroupsListActivity) context).updateGroupsList(object);
+//                        } else {
+//                            // something went wrong
+//                            e.printStackTrace();
+//                        }
+//                        dialog.dismiss();
+//                    }
+//                });
+//            }
+//        });
+//    }
 }

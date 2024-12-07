@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_name_label"
+            android:text="Tên nhóm"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:hint="@string/group_name_placeholder"
+            android:hint="Nhập tên nhóm"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_description_label"
+            android:text="Mô tả"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:ems="10"
-            android:hint="@string/group_description_placeholder"
+            android:hint="Thêm mô tả nhóm"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:textSize="14sp" />
@@ -75,7 +75,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_currency_label"
+            android:text="Tiền tệ"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.3"
-            android:text="@string/group_participants_label"
+            android:text="Thành viên"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView4" />
@@ -116,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:ems="10"
-                android:hint="@string/group_participants_placeholder"
+                android:hint="Nhập tên thành viên"
                 android:inputType="textPersonName"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -148,7 +148,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/groupIdLabel"
+            android:text="ID Nhóm"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -174,7 +174,7 @@
                 android:id="@+id/editGroupCopyIdButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/copy_id_button" />
+                android:text="Sao chép ID" />
         </LinearLayout>
 
     </LinearLayout>
@@ -189,14 +189,14 @@
             android:id="@+id/editGroupSaveChangesButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="@string/save_changes_button"
+            android:text="Lưu"
             android:textColor="@color/white" />
 
         <Button
             android:id="@+id/editGroupDeleteButton"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="@string/delete_group_button"
+            android:text="Xóa"
             android:textColor="@color/white"
             android:theme="@style/Style.Nanuda.DeleteButton" />
     </LinearLayout>

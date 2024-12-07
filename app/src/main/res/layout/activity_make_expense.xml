@@ -29,7 +29,7 @@
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="16dp"
-                android:text="@string/name_label"
+                android:text="Tiêu đề"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Input Expense Name"
+                android:hint="Tên khoản chi"
                 android:inputType="textPersonName"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -60,7 +60,7 @@
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="0dp"
-                android:text="@string/amount_label"
+                android:text="Số tiền"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -73,7 +73,7 @@
                 android:inputType="numberDecimal"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:hint="@string/amount_label" />
+                android:hint="Số tiền" />
 
             <TextView
                 android:id="@+id/addExpenseCurrencyLabel"
@@ -100,7 +100,7 @@
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="0dp"
-                android:text="@string/date_label"
+                android:text="Ngày"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="date"
-                android:hint="10/10/2020"
+                android:hint="10/10/2024"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -131,7 +131,7 @@
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="0dp"
-                android:text="@string/payer_label"
+                android:text="Người chi"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -162,7 +162,7 @@
                 android:paddingStart="16dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="0dp"
-                android:text="@string/payee_label"
+                android:text="Chi cho"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

@@ -1,5 +1,6 @@
 package com.example.btlnhomandroid.group;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -74,7 +75,7 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         viewHolder.getNameTextView().setText(groupsList.get(position).getName());
         if (groupsList.get(position).getDesc() != null) {
             viewHolder.getDescTextView().setText(groupsList.get(position).getDesc());

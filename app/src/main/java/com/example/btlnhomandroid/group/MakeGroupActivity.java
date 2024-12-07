@@ -47,8 +47,8 @@ public class MakeGroupActivity extends AppCompatActivity implements AdapterView.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_make_group);
-        txt = (EditText) findViewById(R.id.ParticipantInput);
-        descEditText = (EditText) findViewById(R.id.makeGroupDescEditText);
+        txt = findViewById(R.id.ParticipantInput);
+        descEditText = findViewById(R.id.makeGroupDescEditText);
 
         Spinner mySpinner = findViewById(R.id.addExpensePayerSpinner);
         ArrayAdapter<CharSequence> myAdapter = ArrayAdapter.createFromResource(this, R.array.currency, android.R.layout.simple_spinner_item);
@@ -56,76 +56,70 @@ public class MakeGroupActivity extends AppCompatActivity implements AdapterView.
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(this);
 
-        show = (ListView) findViewById(R.id.participantsListView);
+        show = findViewById(R.id.participantsListView);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MakeGroupActivity.this, android.R.layout.simple_list_item_1, addArray);
         show.setAdapter(adapter);
 
-        save = (Button) findViewById(R.id.addParticipantButton);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String getInput = txt.getText().toString();
+        save = findViewById(R.id.addParticipantButton);
+        save.setOnClickListener(v -> {
+            String getInput = txt.getText().toString();
 
-                if (addArray.contains(getInput)) {
-                    Toast.makeText(getBaseContext(), "Participant already added ", Toast.LENGTH_LONG).show();
-                } else if (getInput.equals("") || getInput.trim().equals("")) {
-                    Toast.makeText(getBaseContext(), "Invalid Name ", Toast.LENGTH_LONG).show();
-                } else if (participantNmb == 20) {
-                    Toast.makeText(getBaseContext(), "Maximum participants number reached ", Toast.LENGTH_LONG).show();
-                } else {
-                    addArray.add(getInput);
-                    adapter.notifyDataSetChanged();
-                    ((EditText) findViewById(R.id.ParticipantInput)).setText(" ");
+            if (addArray.contains(getInput)) {
+                Toast.makeText(getBaseContext(), "Participant already added ", Toast.LENGTH_LONG).show();
+            } else if (getInput.equals("") || getInput.trim().equals("")) {
+                Toast.makeText(getBaseContext(), "Invalid Name ", Toast.LENGTH_LONG).show();
+            } else if (participantNmb == 20) {
+                Toast.makeText(getBaseContext(), "Maximum participants number reached ", Toast.LENGTH_LONG).show();
+            } else {
+                addArray.add(getInput);
+                adapter.notifyDataSetChanged();
+                ((EditText) findViewById(R.id.ParticipantInput)).setText(" ");
 
-                }
             }
         });
-        EditText groupName = (EditText) findViewById(R.id.groupName);
+        EditText groupName = findViewById(R.id.groupName);
 
-        save1 = (Button) findViewById(R.id.makeANewGroupButton);
-        save1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = groupName.getText().toString();
-                String desc = descEditText.getText().toString();
-                Group.Currency currency = Group.Currency.valueOf(mySpinner.getSelectedItem().toString());
-                List<String> participants = addArray;
+        save1 = findViewById(R.id.makeANewGroupButton);
+        save1.setOnClickListener(v -> {
+            String name = groupName.getText().toString();
+            String desc = descEditText.getText().toString();
+            Group.Currency currency = Group.Currency.valueOf(mySpinner.getSelectedItem().toString());
+            List<String> participants = addArray;
 
-                Group group;
+            Group group;
 
-                if (desc.equals("")) {
-                    group = new Group(name, currency, participants);
-                } else {
-                    group = new Group(name, desc, currency, participants);
-                }
-
-                try {
-                    group.save();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
-                GroupsListActivity.addGroupId(group.getObjectId(), MakeGroupActivity.this);
-
-                AlertDialog dialog = new AlertDialog.Builder(MakeGroupActivity.this).
-                        setTitle("Group saved!").
-                        setMessage("Group ID: " + group.getObjectId()).
-                        setNeutralButton("Copy ID", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                                ClipData clip = ClipData.newPlainText("Group ID", group.getObjectId());
-                                clipboard.setPrimaryClip(clip);
-
-                                Context context = getApplicationContext();
-                                Toast.makeText(context, "Group ID copied!", Toast.LENGTH_SHORT).show();
-
-                                Intent intent = new Intent();
-                                setResult(RESULT_OK, intent);
-                                finish();
-                            }
-                        }).show();
+            if (desc.equals("")) {
+                group = new Group(name, currency, participants);
+            } else {
+                group = new Group(name, desc, currency, participants);
             }
+
+            try {
+                group.save();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            GroupsListActivity.addGroupId(group.getObjectId(), MakeGroupActivity.this);
+
+            AlertDialog dialog = new AlertDialog.Builder(MakeGroupActivity.this).
+                    setTitle("Group saved!").
+                    setMessage("Group ID: " + group.getObjectId()).
+                    setNeutralButton("Copy ID", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                            ClipData clip = ClipData.newPlainText("Group ID", group.getObjectId());
+                            clipboard.setPrimaryClip(clip);
+
+                            Context context = getApplicationContext();
+                            Toast.makeText(context, "Group ID copied!", Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent();
+                            setResult(RESULT_OK, intent);
+                            finish();
+                        }
+                    }).show();
         });
     }
 

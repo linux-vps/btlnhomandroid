@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.btlnhomandroid"
-        minSdk = 24
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -47,6 +47,10 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.github.parse-community.Parse-SDK-Android:parse:1.25.0")
+    implementation (libs.itext7.core)
+    implementation ("androidx.annotation:annotation:1.3.0")
+    implementation ("androidx.activity:activity:1.6.0")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

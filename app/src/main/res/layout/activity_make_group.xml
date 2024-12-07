@@ -23,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_name_label"
+            android:text="@string/ten_nhom"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:hint="@string/group_name_placeholder"
+            android:hint="Nhập tên nhóm"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -51,7 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_description_label"
+            android:text="Mô tả"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:hint="@string/group_description_placeholder"
+            android:hint="Nhập mô tả nhóm"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:textSize="14sp" />
@@ -79,7 +79,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/group_currency_label"
+            android:text="Tiền tệ"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -104,7 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.6"
-            android:text="@string/group_participants_label"
+            android:text="Thành viên"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -120,7 +120,7 @@
                 android:id="@+id/ParticipantInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/group_participants_placeholder"
+                android:hint="Nhập tên thành viên"
                 android:inputType="textPersonName"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -154,7 +154,7 @@
             android:id="@+id/makeANewGroupButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/make_group_button_text"
+            android:text="Tạo nhóm"
             android:textColor="@color/white" />
     </LinearLayout>
 

@@ -21,14 +21,14 @@
                 android:id="@+id/expensesExpensesTab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/expenses_tab_text" />
+                android:text="@string/chi_tieu" />
 
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/expensesBalancesTab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/balances_tab_text" />
+                android:text="@string/chia_tien" />
         </com.google.android.material.tabs.TabLayout>
 
     <androidx.recyclerview.widget.RecyclerView

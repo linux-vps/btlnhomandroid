@@ -19,12 +19,12 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/expenses_tab_text" />
+            android:text="@string/chi_tieu" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/balances_tab_text" />
+            android:text="@string/chia_tien" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -32,5 +32,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/balancesTabLayout"/>
+
+    <Button
+        android:id="@+id/exportPdfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balancesList"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-111dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:text="Xuất PDF"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

@@ -65,13 +65,10 @@ public class GroupsListActivity extends AppCompatActivity {
 
         setUpGroupsList();
 
-        addGroupButton = (Button) findViewById(R.id.addGroupButton);
-        addGroupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AddGroupDialog addGroupDialog = new AddGroupDialog(GroupsListActivity.this);
-                addGroupDialog.show();
-            }
+        addGroupButton = findViewById(R.id.addGroupButton);
+        addGroupButton.setOnClickListener(v -> {
+            AddGroupDialog addGroupDialog = new AddGroupDialog(GroupsListActivity.this);
+            addGroupDialog.show();
         });
     }
 
@@ -86,20 +83,18 @@ public class GroupsListActivity extends AppCompatActivity {
         if (groupIds.size() > 0) {
             ParseQuery<Group> query = ParseQuery.getQuery("Group");
             query.whereContainedIn(Group.KEY_OBJECT_ID, groupIds);
-            query.findInBackground(new FindCallback<Group>() {
-                public void done(List<Group> groupsList, ParseException e) {
-                    if (e == null) {
-                        GroupsListActivity.this.groupsList = groupsList;
-                        int groupsListSize = GroupsListActivity.this.groupsList.size();
+            query.findInBackground((groupsList, e) -> {
+                if (e == null) {
+                    GroupsListActivity.this.groupsList = groupsList;
+                    int groupsListSize = GroupsListActivity.this.groupsList.size();
 
-                        for (int i = 0; i < groupsListSize; i++) {
-                            groupNames.add(groupsList.get(i).getName());
-                        }
-                    } else {
-                        Log.d("Groups List", "Error: " + e.getMessage());
+                    for (int i = 0; i < groupsListSize; i++) {
+                        groupNames.add(groupsList.get(i).getName());
                     }
-                    setUpRecyclerView(GroupsListActivity.this.groupsList);
+                } else {
+                    Log.d("Groups List", "Error: " + e.getMessage());
                 }
+                setUpRecyclerView(GroupsListActivity.this.groupsList);
             });
         } else {
             setUpRecyclerView(GroupsListActivity.this.groupsList);

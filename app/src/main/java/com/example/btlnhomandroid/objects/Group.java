@@ -20,7 +20,7 @@ public class Group extends ParseObject {
      * Enum for Currency
      */
     public enum Currency {
-        USD, EUR, KRW
+        USD, VND, KRW
     }
 
     /**

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nanuda</string>
+    <string name="app_name">Quản lý chi tiêu nhóm</string>
     <string name="title_activity_expense_main_display">expense_main_display</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
@@ -42,7 +42,7 @@
     <string name="make_group_button_text">Make Group</string>
     <string-array name="currency">
         <item>USD</item>
-        <item>EUR</item>
+        <item>VND</item>
         <item>KRW</item>
     </string-array>
 
@@ -83,4 +83,8 @@
     <string name="copy_id_button">Copy ID</string>
     <string name="save_changes_button">SAVE CHANGES</string>
     <string name="delete_group_button">Delete Group</string>
+    <string name="chi_tieu">Chi tiêu</string>
+    <string name="chia_tien">Chia tiền</string>
+    <string name="khoan_chi">Khoản chi</string>
+    <string name="ten_nhom">Tên nhóm</string>
 </resources>
